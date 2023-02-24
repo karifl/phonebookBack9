@@ -6,6 +6,8 @@ const fs = require('fs')
 const path = require('path')
 const app = express()
 
+let testURL = './src/App.js'
+
 let persons = [
     {
         "id": 1,
@@ -86,7 +88,7 @@ app.get('/notes', (request, response) => {
 
 
 
-app.get('/api/persons', (request, response) => {
+app.get(testURL, (request, response) => {
     //console.log('' + numbers[1].name + '' + numbers[1].number)
     //response.send('<h1>' + numbers[1].name + numbers[1].number + '</h1>')
     const person = persons.map(person => person)

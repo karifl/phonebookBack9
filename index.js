@@ -72,7 +72,7 @@ app.use(morgan(':method :url :status :res[content-length] - :response-time ms --
 
 
 
-app.get(testURL, function(request, response){
+app.get('/', function(request, response){
     response.send('<h1> phonebook step 9 for backend </h1>')
     app.use(morgan('tiny')) 
 })

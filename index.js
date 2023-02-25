@@ -72,8 +72,8 @@ app.use(morgan(':method :url :status :res[content-length] - :response-time ms --
 
 
 
-app.get('/', function(request, response){
-    response.send('<h1> phonebook step 8 for backend </h1>')
+app.get(testURL, function(request, response){
+    //response.send('<h1> phonebook step 9 for backend </h1>')
     app.use(morgan('tiny')) 
 })
 
@@ -204,7 +204,7 @@ app.post('/api/persons', (request, response) => {
 })
 
 
-const PORT = process.env.PORT ||3001
+const PORT = process.env.PORT || 3001
 app.listen(PORT, () => {
     console.log('Server running on port  ', PORT)
 })

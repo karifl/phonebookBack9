@@ -36,7 +36,7 @@ let persons = [
     }
 ]
 app.use(express.json())
-app.use(express.static('src'))
+app.use(express.static('build'))
 //https://www.atatus.com/blog/a-beginners-guide-to-morgan-npm-logger/
 
 

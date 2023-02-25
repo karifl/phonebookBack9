@@ -6,7 +6,7 @@ const fs = require('fs')
 const path = require('path')
 const app = express()
 
-let testURL = './src/App.js'
+let testURL = './build/App.js'
 
 let persons = [
     {
@@ -36,7 +36,7 @@ let persons = [
     }
 ]
 app.use(express.json())
-
+app.use(express.static('src'))
 //https://www.atatus.com/blog/a-beginners-guide-to-morgan-npm-logger/
 
 

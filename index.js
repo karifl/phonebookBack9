@@ -6,7 +6,7 @@ const fs = require('fs')
 const path = require('path')
 const app = express()
 
-let testURL = './build/App.js'
+let testURL = './build/index.html'
 
 let persons = [
     {
@@ -72,7 +72,8 @@ app.use(morgan(':method :url :status :res[content-length] - :response-time ms --
 
 
 
-app.get('/', function(request, response){
+app.get(testURL, function(request, response){
+
     response.send('<h1> phonebook step 9 for backend </h1>')
     app.use(morgan('tiny')) 
 })
